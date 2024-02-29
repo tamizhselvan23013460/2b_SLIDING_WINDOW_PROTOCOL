@@ -9,36 +9,12 @@
 6. Stop the Program
 ## PROGRAM:
 ### CLIENT:
-```
-import socket
-s=socket.socket()
-s.bind(('localhost',8000))
-s.listen(5)
-c,addr=s.accept()
-size=int(input("Enter number of frames to send : "))
-l=list(range(size))
-s=int(input("Enter Window Size : "))
-st=0
-i=0
-while True:
- while(i<len(l)):
-     st+=s
-     c.send(str(l[i:st]).encode())
-     ack=c.recv(1024).decode()
-     if ack:
-        print(ack)
-        i+=s
-```
+![client2](https://github.com/tamizhselvan23013460/2b_SLIDING_WINDOW_PROTOCOL/assets/150231370/94332165-3d73-45cb-81c2-e717e0ba3889)
+
 
 ### SERVER:
-```
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-while True: 
-     print(s.recv(1024).decode())
-     s.send("acknowledgement recived from the server".encode())
-```
+![server2](https://github.com/tamizhselvan23013460/2b_SLIDING_WINDOW_PROTOCOL/assets/150231370/4b23d0ab-878c-4a5e-8d62-10f226e5e929)
+
      
 ## OUTPUT:
 
